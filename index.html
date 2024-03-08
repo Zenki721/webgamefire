@@ -1,0 +1,79 @@
+﻿
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炎色反応カードゲーム</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="title_page">
+        <h1>炎の勇者</h1>
+        <button id="start">スタート</button>
+        <button id="rule">ルール説明</button>
+        <img id="img0" src="fire_flame.png" />
+    </div>
+
+    <div class="rule_page">
+        <p>
+            [問題]：炎色反応を起こして炎で怪獣を攻撃しよう<br />
+            ルール1:怪獣と同じ色の炎が弱点。弱点以外の攻撃は効かない<br />
+            ルール2：怪獣は２ターンごとに攻撃してくる<br />
+            ルール3：回復札または防御札は存在しない<br />
+            ルール4：５ターン以内に倒さないといけない<br />
+        </p>
+        <button class="go_title">タイトルへ戻る</button>
+    </div>
+
+    <div id="game-container" class="game_page">
+        <div id="turn-counter">
+            <p>Turn:<span id="turn-count">1</span></p>
+        </div>
+        <div id="enemy-color">
+        <img id="enemy"class="enemy_yellow" src="enemy_yellow.png" style="display:none;"/>
+    	<img id="enemy"class="enemy_red" src="enemy_red.png" style="display:none;"/>
+    	<img id="enemy"class="enemy_green" src="enemy_green.png" style="display:none;"/>
+    	<img id="enemy"class="enemy_deepred" src="enemy_deepred.png" style="display:none;"/>
+    	<img id="enemy"class="enemy_purple" src="enemy_purple.png" style="display:none;"/>
+    	<img id="enemy"class="enemy_greenyellow" src="enemy_greenyellow.png" style="display:none;"/>
+    	<img id="enemy"class="enemy_orange" src="enemy_orange.png" style="display:none;"/>
+            <img id="fire"src="fire.png" style="display:none;"/>
+            <h2>弱点:</h2>
+            <div id="enemy-color-display"></div>
+        </div>
+
+        <div id="user-hand">
+            <h2>あなたの手札:</h2>
+            <ul id="user-cards">
+                <!-- ユーザーのカードはここに追加されます -->
+            </ul>
+        </div>
+        <img id="maru" src="maru.png" style="display:none;" />
+        <img id="batsu" src="batsu.png" style="display:none;" />
+
+        <div id="enemy-stats">
+            <p>Enemy HP: <span id="enemy-hp">♥♥♥♥</span></p>
+        </div>
+
+        <div id="user-stats">
+            <p>Health: <span id="user-health">♥♥♥</span></p>
+        </div>
+        <div id="incorrect-message"></div>
+    </div>
+    <button id="next"style="display:none;">次へ</button>
+
+    <div class="result_page">
+        <h2>Game Result:</h2>
+        <p id="result-message"></p><button id="reset">タイトルへ戻る</button>
+        <img id="lose" src="lose.png" style="display:none;" />
+        <img id="win" src="win.png" style="display:none;" />
+
+    </div>
+
+    
+
+    <script src="main.js"></script>
+
+</body>
+</html>
